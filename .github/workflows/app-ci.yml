@@ -22,6 +22,6 @@ jobs:
       run: mvn clean install
     - name: Docker build of the realstate app
       run: |
-        docker build -t varunthamishetti123/realstate:1.0.0
+        docker build -t varunthamishetti123/realstate:1.0.0 .
         docker login -u varunthamishetti123 -p ${{ secrets.DOCKER_PASSWD }}
         docker push varunthamishetti123/realstate:1.0.0
